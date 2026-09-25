@@ -233,14 +233,15 @@ nav a:hover {
 footer {
     background: var(--navy);
     color: white;
-
     padding: 40px 6vw;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     font-size: 13px;
+}
+
+footer .logo {
+    color: white;
 }
 
 footer p {
