@@ -170,12 +170,13 @@ nav a:hover {
 }
 
 .book-cover {
-    background: var(--navy);
     aspect-ratio: 0.7;
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.book-cover img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .cover-placeholder {
