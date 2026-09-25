@@ -1,2 +1,2 @@
 # lifebeltpress
-Lifebelt Press — independent imprint
+Lifebelt Press — independent poetry imprint
