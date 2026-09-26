@@ -1,2 +1,2 @@
 # lifebeltpress
-Lifebelt Press — independent poetry imprint
+Lifebelt Press — an independent imprint publishing works of poetry and non-fiction.
