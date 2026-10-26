@@ -3,9 +3,10 @@
    --------------------------------- */
 
 :root {
-    --navy: #242332;
+    --navy: #223;
     --cream: #f4f1e8;
-    --text: #242332;
+	--gold: #cda250;
+    --text: #223;
     --muted: #77737b;
     --line: #d8d4cb;
 }
@@ -25,7 +26,6 @@ body {
     margin: 0;
     background: var(--cream);
     color: var(--text);
-
     font-family: Georgia, "Times New Roman", serif;
     font-size: 18px;
     line-height: 1.65;
@@ -37,9 +37,7 @@ body {
 .site-header {
     background: var(--navy);
     color: white;
-
     padding: 28px 6vw;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -49,7 +47,6 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-
     font-size: 13px;
     letter-spacing: 3px;
     line-height: 1.4;
@@ -70,7 +67,6 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-
     font-size: 15px;
     letter-spacing: 1px;
 }
@@ -84,13 +80,10 @@ nav a:hover {
 
 .hero {
     min-height: 72vh;
-
     background: var(--navy);
     color: white;
-
     display: flex;
     align-items: center;
-
     padding: 8vw;
 }
 
@@ -119,15 +112,11 @@ nav a:hover {
 
 .button {
     display: inline-block;
-
     margin-top: 25px;
     padding: 12px 24px;
-
     border: 1px solid white;
-
     color: white;
     text-decoration: none;
-
     font-size: 15px;
     letter-spacing: 1px;
 }
@@ -143,7 +132,6 @@ nav a:hover {
 .section {
     max-width: 1100px;
     margin: auto;
-
     padding: 110px 6vw;
 }
 
@@ -156,7 +144,6 @@ nav a:hover {
     font-size: clamp(32px, 4vw, 52px);
     font-weight: normal;
     line-height: 1.15;
-
     margin-top: 0;
 }
 
@@ -167,8 +154,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: minmax(260px, 420px) 1fr;
     gap: 80px;
-
-    align-items: center;
+    align-items: top;
 }
 
 .book-cover {
@@ -184,13 +170,15 @@ nav a:hover {
 .cover-placeholder {
     color: white;
     text-align: center;
-
     font-size: 25px;
     line-height: 1.25;
 }
 
-.book-details h2 {
-    margin-bottom: 5px;
+.book-details h1 {
+    font-size: clamp(24px, 4vw, 40px);
+	font-weight:normal;
+    line-height: 1.25;
+    margin: 5px 0;
 }
 
 .author {
@@ -201,7 +189,6 @@ nav a:hover {
 .text-link {
     color: var(--text);
     text-decoration: none;
-
     border-bottom: 1px solid var(--text);
 }
 
@@ -210,19 +197,19 @@ nav a:hover {
 }
 
 .checkout-container {
-	margin: 30px 0;
+	margin: 15px 0 0;
 }
 
 .checkout-button {
 	background-color: var(--navy); 
 	border: 1px solid var(--navy); 
 	color: white; 
-	padding: 14px 28px; 
+	padding: 7px 14px; 
 	text-decoration: none; 
 	font-weight: bold; 
 	display: inline-block; 
 	font-size: 16px; 
-	transition: background-color 0.2s ease;
+	margin: 5px 0;
 }
 .checkout-button:hover {
 	background-color: white; 
@@ -231,7 +218,7 @@ nav a:hover {
 .checkout-subtext {
 	font-size: 14px; 
 	color: var(--muted); 
-	margin-top: 8px;
+	margin-top: 0;
 }
 
 /* About */
@@ -273,9 +260,192 @@ footer p {
 }
 
 
-/* Mobile */
+/* ==========================================================================
+   Book Detail Additions 
+   ========================================================================== */
 
-@media (max-width: 700px) {
+.book-media {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.book-preview {
+    text-align: center;
+}
+
+/* Secondary block variant for layouts using dark backgrounds inside light grids */
+.button.outline {
+    border: 1px solid var(--navy);
+    color: var(--navy);
+    display: block;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.button.outline:hover {
+    background: var(--navy);
+    color: white;
+}
+
+/* Quote & Descriptive Blocks */
+.lead-quote {
+    font-style: italic;
+    border-left: 4px solid var(--line);
+    padding-left: 20px;
+    margin: 25px 0;
+    color: var(--navy);
+    line-height: 1.5;
+}
+
+.short-blurb {
+    margin-bottom: 20px;
+}
+
+.long-blurb-section {
+  border-top: 1px solid var(--line);
+  margin-top: 30px;
+  padding-top: 30px;
+}
+
+/* Compact Metadata */
+.book-meta-inline {
+    font-size: 15px;
+/    border-top: 1px solid var(--line);
+/    border-bottom: 1px solid var(--line);
+    padding: 15px 0;
+    margin: 20px 0;
+}
+
+/* 2x2 Clean Grid for Purchase Options */
+.purchase-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.purchase-card {
+    background: white;
+    border: 1px solid var(--line);
+    padding: 16px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Subtle distinction for the special signed copy */
+.purchase-card.highlighted {
+    border-color: var(--gold);
+    background: rgba(205, 162, 80, 0.02);
+}
+
+.purchase-card h4 {
+    margin: 0 0 6px 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.purchase-card h4 .qty {
+    font-weight: normal;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.purchase-card .price {
+    margin: 0 0 16px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.purchase-card .postage {
+    display: inline-block;
+    font-weight: normal;
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+}
+
+/* Flat Button Styling */
+.checkout-btn-flat {
+    display: block;
+    text-align: center;
+    background: var(--navy);
+    border: 1px solid var(--navy);
+    color: #fff;
+    text-decoration: none;
+    padding: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background 0.2s ease;
+}
+
+.checkout-btn-flat:hover {
+    background: #fff;
+    color: var(--navy);
+}
+
+.checkout-btn-flat.gold {
+    background: var(--gold);
+    border: 1px solid var(--gold);
+}
+
+.checkout-btn-flat.gold:hover {
+    background: #fff;
+    color: var(--gold);
+}
+
+
+/* Author Split Grid Layout */
+.author-profile-section {
+    border-top: 1px solid var(--line);
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+.author-profile-layout {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 25px;
+}
+
+.author-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.author-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    display: block;
+}
+
+.photo-credit {
+    font-size: 11px;
+    color: var(--muted);
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.author-bio-text p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+
+
+/* ==========================================================================
+   Mobile Responsiveness for Small Screens
+   ========================================================================== */
+
+
+@media (max-width: 800px) {
 
     .site-header {
         align-items: flex-start;
@@ -301,7 +471,8 @@ footer p {
         gap: 45px;
     }
 
-    .book-cover {
+    .book-cover,
+    .book-preview {
         max-width: 360px;
     }
 
@@ -309,5 +480,23 @@ footer p {
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 960px), 
+       screen and (max-width: 480px)  {
+    .purchase-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .author-profile-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .author-image-wrapper {
+        max-width: 150px;
     }
 }
