@@ -31,17 +31,27 @@
 	<h2>Thank you for your order.</h2>
 	
 	<p style="max-width: 600px; margin-bottom: 30px;">
-		Your pre-order of <strong>A Necessary Presence</strong> by Clare Bryden has been processed successfully and a purchase from LIFEBELT PRESS will appear on your bank statement.
-		A confirmation receipt has been sent to your email from Stripe.
+		Your order of <strong><em>A Necessary Presence</em></strong> by Clare Bryden has been processed successfully and a confirmation receipt has been sent to your email from Stripe. A purchase from LIFEBELT PRESS will appear on your bank statement.
 	</p>
 
 	<p style="max-width: 600px; color: var(--muted);">
-		We are preparing your package for delivery via Royal Mail. Publication date is 13 November, and pre-orders will be posted from 10 November. Please allow 3–5 working days for transit within the UK. 
+		We are preparing your package for delivery via Royal Mail. Please allow 3–5 working days for transit within the UK. 
 		If you have any questions about your shipping or package details, feel free to get in touch at 
 		<a class="text-link" id="contact-email" href="#">
 			lifebeltpress@gmail.com
 		</a>.
 	</p>
+
+	<script>
+	(function () {
+		const email =
+			String.fromCharCode(108,105,102,101,98,101,108,116,112,114,101,115,115) +
+			'@' +
+			String.fromCharCode(103,109,97,105,108,46,99,111,109);
+	
+		document.getElementById('contact-email').href = 'mailto:' + email;
+	})();
+	</script>
 
 	<div>
 		<a href="index.html" class="checkout-button">Return to Homepage</a>
