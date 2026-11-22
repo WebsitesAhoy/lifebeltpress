@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sold Out — Lifebelt Press</title>
+    <link rel="stylesheet" href="style.css"> <!-- Your existing CSS file -->
+    <link rel="icon" type="image/svg+xml" href="lifebelt_glyph.svg">
+</head>
+<body>
+
+<header class="site-header">
+
+    <div class="logo">
+        <img class="lifebelt" src="lifebelt_glyph.svg" alt="Lifebelt Press">
+        <span>LIFEBELT<br>PRESS</span>
+    </div>
+
+    <nav>
+        <a href="https://lifebeltpress.co.uk/">Home</a>
+        <a href="https://lifebeltpress.co.uk/#books">Books</a>
+        <a href="https://lifebeltpress.co.uk/#about">About</a>
+        <a href="https://lifebeltpress.co.uk/#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<main class="section" style="min-height: 60vh; display: flex; flex-direction: column; justify-content: center;">
+	<div class="section-label">Print Run Status</div>
+	<h2>First print run sold out!</h2>
+	
+	<p style="max-width: 600px; margin-bottom: 30px;">
+		Thank you for your incredible interest in <strong><em>A Necessary Presence</em></strong>. 
+		Our initial physical print stock has completely sold out.
+	</p>
+
+	<p style="max-width: 600px; color: var(--muted);">
+		If you missed out and would like to secure a copy from our next print run, or if you are interested in an upcoming digital version, please register your interest directly by dropping us a note at 
+		<a class="text-link" id="contact-email" href="#">lifebeltpress@gmail.com</a>.
+	</p>
+
+	<script>
+	(function () {
+		const email =
+			String.fromCharCode(108,105,102,101,98,101,108,116,112,114,101,115,115) +
+			'@' +
+			String.fromCharCode(103,109,97,105,108,46,99,111,109);
+	
+		document.getElementById('contact-email').href = 'mailto:' + email;
+	})();
+	</script>
+
+</main>
+
+<footer>
+    
+    <div class="logo">
+        <img class="lifebelt" src="https://lifebeltpress.co.uk/lifebelt_glyph.svg" alt="Lifebelt Press">
+        <span>LIFEBELT<br>PRESS</span>
+    </div>
+    
+    <p>© 2026 Lifebelt Press, a trading name of Exeter Sustainable Enterprises Limited<br />
+        Registered address 1 Miller Close, Exeter EX2 5NE • Company number 07869010</p>
+    
+</footer>
+
+</body>
+</html>

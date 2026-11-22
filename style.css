@@ -148,6 +148,24 @@ nav a:hover {
 }
 
 
+/* About */
+
+.about {
+    border-top: 1px solid var(--line);
+}
+
+.about p {
+    max-width: 650px;
+}
+
+
+/* Contact */
+
+.contact {
+    border-top: 1px solid var(--line);
+}
+
+
 /* Book */
 
 .book {
@@ -221,21 +239,52 @@ nav a:hover {
 	margin-top: 0;
 }
 
-/* About */
 
-.about {
-    border-top: 1px solid var(--line);
+/* Service */
+
+main.service {
+  padding-bottom: 110px;
 }
 
-.about p {
-    max-width: 650px;
+.section.service-intro {
+  padding: 110px 6vw 30px;
 }
 
+.section.service {
+  border-top: 1px solid var(--line);
+  margin: 30px 6vw;
+  padding: 0 0 30px;
+}
 
-/* Contact */
+.service h3 {
+  font-size: clamp(20px, 3vw, 32px);
+  font-weight: normal;
+}
 
-.contact {
-    border-top: 1px solid var(--line);
+.service table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.service th, .service td {
+  border: 2px solid var(--cream);
+  font-size: 90%;
+  padding: 16px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.service tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.service .buttons {
+	margin-top: 60px;
+}
+
+.updated {
+  font-style: italic;
+  padding: 60px 0 0;
 }
 
 
@@ -261,8 +310,7 @@ footer p {
 
 
 /* ==========================================================================
-   Book Detail Additions 
-   ========================================================================== */
+   Book Detail Additions    ========================================================================== */
 
 .book-media {
     display: flex;
@@ -370,7 +418,7 @@ footer p {
 
 /* Flat Button Styling */
 .checkout-btn-flat {
-    display: block;
+ /   display: block;
     text-align: center;
     background: var(--navy);
     border: 1px solid var(--navy);
@@ -442,8 +490,7 @@ footer p {
 
 
 /* ==========================================================================
-   Mobile Responsiveness for Small Screens
-   ========================================================================== */
+   Mobile Responsiveness for Small Screens   ========================================================================== */
 
 
 @media (max-width: 800px) {
