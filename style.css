@@ -247,13 +247,12 @@ main.service {
 }
 
 .section.service-intro {
-  padding: 110px 6vw 30px;
+  padding: 110px 6vw 60px;
 }
 
 .section.service {
   border-top: 1px solid var(--line);
-  margin: 30px 6vw;
-  padding: 0 0 30px;
+  padding: 30px 6vw 60px;
 }
 
 .service h3 {
