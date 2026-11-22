@@ -110,6 +110,10 @@ nav a:hover {
     max-width: 560px;
 }
 
+.buttons {
+  line-height: 34px;
+}
+
 .button {
     display: inline-block;
     margin-top: 25px;
@@ -119,6 +123,7 @@ nav a:hover {
     text-decoration: none;
     font-size: 15px;
     letter-spacing: 1px;
+	white-space: nowrap;
 }
 
 .button:hover {
@@ -428,7 +433,7 @@ footer p {
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
-    transition: background 0.2s ease;
+	white-space: nowrap;
 }
 
 .checkout-btn-flat:hover {
