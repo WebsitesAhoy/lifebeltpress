@@ -75,6 +75,12 @@ nav a:hover {
     text-decoration: underline;
 }
 
+main h1 {
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: normal;
+    line-height: 1.25;
+}
+
 
 /* Hero */
 
@@ -101,8 +107,7 @@ nav a:hover {
 .hero h1 {
     font-size: clamp(42px, 6vw, 76px);
     font-weight: normal;
-    line-height: 1.08;
-
+    line-height: 1.15;
     margin: 20px 0 30px;
 }
 
@@ -146,9 +151,9 @@ nav a:hover {
 }
 
 .section h2 {
-    font-size: clamp(32px, 4vw, 52px);
+	font-size: clamp(20px, 3vw, 32px);
     font-weight: normal;
-    line-height: 1.15;
+    line-height: 1.25;
     margin-top: 0;
 }
 
@@ -197,7 +202,8 @@ nav a:hover {
     line-height: 1.25;
 }
 
-.book-details h1 {
+.book-details h1,
+.book-details h2 {
     font-size: clamp(24px, 4vw, 40px);
 	font-weight:normal;
     line-height: 1.25;
@@ -258,11 +264,6 @@ main.service {
 .section.service {
   border-top: 1px solid var(--line);
   padding: 30px 6vw 60px;
-}
-
-.service h3 {
-  font-size: clamp(20px, 3vw, 32px);
-  font-weight: normal;
 }
 
 .service table {
@@ -345,7 +346,7 @@ footer p {
     font-style: italic;
     border-left: 4px solid var(--line);
     padding-left: 20px;
-    margin: 25px 0;
+    margin: 50px 0;
     color: var(--navy);
     line-height: 1.5;
 }
