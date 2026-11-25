@@ -180,18 +180,21 @@ main h1 {
 
 .book {
     display: grid;
-    grid-template-columns: minmax(260px, 420px) 1fr;
+    grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
     gap: 80px;
-    align-items: top;
+    align-items: start;
 }
 
 .book-cover {
+    width: 100%;
+    max-width: 420px;
     aspect-ratio: 0.7;
 }
 
 .book-cover img {
     display: block;
     width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -200,6 +203,10 @@ main h1 {
     text-align: center;
     font-size: 25px;
     line-height: 1.25;
+}
+
+.book-details {
+    min-width: 0;
 }
 
 .book-details h1,
@@ -365,8 +372,6 @@ footer p {
 /* Compact Metadata */
 .book-meta-inline {
     font-size: 15px;
-/    border-top: 1px solid var(--line);
-/    border-bottom: 1px solid var(--line);
     padding: 15px 0;
     margin: 20px 0;
 }
@@ -505,28 +510,9 @@ footer p {
     }
 
     nav {
-        gap: 15px;
+        gap: 5px;
         flex-direction: column;
         align-items: flex-end;
-    }
-
-    .hero {
-        min-height: 65vh;
-        padding: 15vw 8vw;
-    }
-
-    .section {
-        padding: 75px 8vw;
-    }
-
-    .book {
-        grid-template-columns: 1fr;
-        gap: 45px;
-    }
-
-    .book-cover,
-    .book-preview {
-        max-width: 360px;
     }
 
     footer {
@@ -534,6 +520,137 @@ footer p {
         align-items: flex-start;
         gap: 20px;
     }
+
+/* index, books */
+
+    .hero {
+        min-height: 55vh;
+        padding: 5vw 8vw 15vw;
+    }
+
+    .section {
+        padding: 75px 8vw;
+    }
+
+    .book {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 45px;
+    }
+
+    .book-cover,
+    .book-preview {
+        width: 100%;
+        max-width: 360px;
+    }
+
+/* services */
+
+@media (max-width: 800px) {
+    /* ... keep your existing header, hero, section, book, and footer rules ... */
+
+    .section.service-intro {
+        padding: 75px 8vw 40px;
+    }
+
+    .section.service {
+        padding: 30px 8vw 50px;
+    }
+
+    /* Base stacked layout for ALL three service tables */
+    .service table,
+    .service tbody,
+    .service tr,
+    .service td {
+        display: block;
+        width: 100%;
+    }
+
+    .service tr {
+        margin-bottom: 16px;
+        border: 1px solid var(--line);
+        background-color: #fff;
+    }
+
+    .service tbody tr:nth-child(odd) {
+        background-color: #fff;
+    }
+
+    .service td {
+        border: none;
+        border-bottom: 1px solid var(--cream);
+        padding: 12px 16px;
+    }
+
+    .service td:last-child {
+        border-bottom: none;
+    }
+
+    /* =========================================================
+       TABLE 1: Packages (#packages)
+       ========================================================= */
+    #packages tr:first-child {
+        display: none;
+    }
+
+    /* Package header & fee styling for the 3 main packages (rows 2, 3, 4) */
+    #packages tr:nth-child(2) td:first-child,
+    #packages tr:nth-child(3) td:first-child,
+    #packages tr:nth-child(4) td:first-child {
+        background-color: var(--navy);
+        color: #fff;
+    }
+
+    #packages tr:nth-child(2) td:last-child,
+    #packages tr:nth-child(3) td:last-child,
+    #packages tr:nth-child(4) td:last-child {
+        font-weight: bold;
+        background-color: rgba(205, 162, 80, 0.12);
+    }
+
+    #packages tr:nth-child(2) td:last-child::before,
+    #packages tr:nth-child(3) td:last-child::before,
+    #packages tr:nth-child(4) td:last-child::before {
+        content: "Fee (+ print & hard costs)";
+        display: block;
+        font-size: 12px;
+        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--muted);
+        margin-bottom: 4px;
+    }
+
+    /* Optional Extras row (row 5) */
+    #packages tr:nth-child(5) {
+        background-color: rgba(205, 162, 80, 0.08);
+        border-color: var(--gold);
+    }
+
+    /* =========================================================
+       TABLE 2: Indicative Hard Costs (#hard-costs)
+       ========================================================= */
+
+    /* Removes gaps between print cost rows, and highlights title row */
+	#hard-costs tr:nth-of-type(2),
+	#hard-costs tr:nth-of-type(3) {
+        margin-bottom:0;
+        border-bottom:none;
+    }
+	#hard-costs tr:nth-of-type(2) td {
+        font-weight: bold;
+    }
+    /* Highlights "48 pages" and "80 pages" cells when paired with prices */
+    #hard-costs td:first-child:not(:only-child) {
+        background-color: rgba(205, 162, 80, 0.12);
+   }
+
+    /* =========================================================
+       TABLE 3: How It Works & Payment Schedule (#process)
+       ========================================================= */
+    /* Uses the base stacked card rules above with no hidden rows or extra labels */
+}
+
+
 }
 
 @media screen and (min-width: 800px) and (max-width: 960px), 
