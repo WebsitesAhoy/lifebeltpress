@@ -319,9 +319,19 @@ footer p {
     margin: 0;
 }
 
+footer a {
+    color: white;
+	border-bottom: 1px solid white;
+	text-decoration: none;
+}
+footer a:hover {
+	border-bottom: 2px solid white;
+}
+
 
 /* ==========================================================================
-   Book Detail Additions    ========================================================================== */
+   Book Detail Additions    
+   ========================================================================== */
 
 .book-media {
     display: flex;
@@ -349,9 +359,9 @@ footer p {
 
 /* Quote & Descriptive Blocks */
 .lead-quote {
-    font-style: italic;
-    border-left: 4px solid var(--line);
-    padding-left: 20px;
+	background-color: rgba(205, 162, 80, 0.08);
+    border-left: 4px solid var(--gold);
+    padding: 20px;
     margin: 50px 0;
     color: var(--navy);
     line-height: 1.5;
@@ -647,8 +657,6 @@ footer p {
        TABLE 3: How It Works & Payment Schedule (#process)
        ========================================================= */
     /* Uses the base stacked card rules above with no hidden rows or extra labels */
-}
-
 
 }
 
